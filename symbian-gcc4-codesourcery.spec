@@ -4,13 +4,13 @@
 Summary:	GNU Toolchain for ARM Processors
 Summary(pl.UTF-8):	Zestaw narzędzi GNU dla procesorów ARM
 Name:		symbian-gcc4-codesourcery
-Version:	2007q3_52
+Version:	2008q1
 Release:	1
 License:	GPL
 Group:		Developement
 # http://www.codesourcery.com/gnu_toolchains/arm/download.html
-Source0:	http://www.codesourcery.com/public/gnu_toolchain/arm-none-symbianelf/arm-2007q3-52-arm-none-symbianelf-i686-pc-linux-gnu.tar.bz2
-# Source0-md5:	b24c4a73a20846be370ba6c8d5878fed
+Source0:	http://www.codesourcery.com/public/gnu_toolchain/arm-none-symbianelf/arm-2008q1-126-arm-none-symbianelf-i686-pc-linux-gnu.tar.bz2
+# Source0-md5:	1e12a4c75ac2989950537ab19c9360ec
 URL:		http://www.codesourcery.com/gnu_toolchains/arm
 Conflicts:	symbian-sdk-s60v3fp1 < 1.07-2
 ExclusiveArch:	%{ix86}
@@ -34,12 +34,12 @@ including Version 7 of the ARM Architecture.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir}}
 
-cd arm-2007q3
+cd arm-2008q1
 
 cp -r arm-none-symbianelf $RPM_BUILD_ROOT%{_prefix}/
 cp -r bin/* $RPM_BUILD_ROOT%{_bindir}
 cp -r lib/gcc $RPM_BUILD_ROOT%{_libdir}
-cp libexec/gcc/arm-none-symbianelf/4.2.1/c* $RPM_BUILD_ROOT%{_prefix}/arm-none-symbianelf/bin
+cp libexec/gcc/arm-none-symbianelf/4.2.3/c* $RPM_BUILD_ROOT%{_prefix}/arm-none-symbianelf/bin
 
 %clean
 rm -rf $RPM_BUILD_ROOT
